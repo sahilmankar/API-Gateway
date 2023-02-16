@@ -1,0 +1,154 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  },
+
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/departments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/departments",
+      "UpstreamHttpMethod": ["GET"]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/departments/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/departments/{id}",
+      "UpstreamHttpMethod": ["GET"]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/departments/insert",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/departments/insert",
+      "UpstreamHttpMethod": ["POST"]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/departments/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/departments/update",
+      "UpstreamHttpMethod": ["PUT"]
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/departments/delete/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/departments/delete/{id}",
+      "UpstreamHttpMethod": ["DELETE"]
+    },
+
+
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/products",
+      "UpstreamHttpMethod": ["GET"]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/products/{id}",
+      "UpstreamHttpMethod": ["GET"]
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/products/insert",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/products/insert",
+      "UpstreamHttpMethod": ["POST"]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/products/update/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/products/update/{id}",
+      "UpstreamHttpMethod": ["PUT"]
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/products/delete/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/products/delete/{id}",
+      "UpstreamHttpMethod": ["DELETE"]
+    }
+
+    
+  ]
+}
