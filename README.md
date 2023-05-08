@@ -14,33 +14,20 @@
 >
 > To run <b>DepartmentAPI</b> first create database in mysql as <b>transflower</b> and import <b>Departments.sql </b> in it<br>
 > or you can choose any database but don't forgot to edit <b> ConnectionString </b> in **CollectionContext.cs**   <br><br>
->After this run a command <b>dotnet restore</b> <br>
-> check directory efore using command 
-```console
-   cd DepartmentAPI && dotnet restore && dotnet run
-
-```
 > It will run on port **5002**<br><br>
 > The Second is <b>ProductAPI :</b> <br><br>
 > Which is Built using   <b> Node.js, Express ,MySQL </b><br>
 > To run <b>ProductAPI</b> first create database in mysql as <b>actsdb</b> or you can use already crated Database and import <b>products.sql </b> in it<br>
 > Make Sure changes in db.js for ConnecionString <br> 
-> To run Open a new teriminal in project directory and run 
-> please check directory before using commands
-```console
-  cd ProductAPI && npm install && node server.js        
-```
-> It will run on port **3000**<br>
-> 
-> After finally run a Gateway project which have all rounting configuration
-> Open another Terminal 
-```console
-  cd Gateway && dotnet restore && dotnet run
-
-```
+> It will run on port **3000**<br><br>
+   
+> After this  finally run a Gateway project which have all rounting configuration<br>
 > It will run on port **5000**<br>
 > If you have any services preconfigured with above ports please make changes<br>
 > Hope all things gone ok ,mostly it will be ok if you have proper database setup<br><br><br>
+   
+> To run all projects you can just click on run.bat(batch) file  
+   
 > Open <b>Postman</b> for <b> API </b> testing <br>
 > And Try following URL <br>
 
@@ -120,7 +107,7 @@
 > 2. The URL will Show  product data by id . request-type GET
 
 ```console
-        http://localhost:5000/departments/2
+        http://localhost:5000/products/2
 ```
 
 <hr>
@@ -128,7 +115,7 @@
 > 3.The URL will Insert  product data  . request-type POST
 
 ```console
-       http://localhost:5000/departments/insert
+       http://localhost:5000/products/insert
 ```
 > For inserting data select Body-> raw -> JSON <br>
 > The data will be type of <b> JSON Object<b<b>>
@@ -147,7 +134,7 @@
 > 4.The URL will Update  product data  . request-type PUT
 
 ```console
-       http://localhost:5000/departments/update/2
+       http://localhost:5000/products/update/2
 ```
 > here 2 is Id<br>
 > For updating data select Body-> raw -> JSON <br>
